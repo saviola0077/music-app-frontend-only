@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import Player from './components/Player';
 
 function App() {
   const [songs, setSongs] = useState([
@@ -25,11 +26,19 @@ function App() {
       artist: "Omahlay",
       img_src: "./images/omahlay.jpg"
       src: "./music/7310_Omah Lay - Safe Haven SHOW2BABI.COM.mp3"
-    },
-  ])
+    }
+  ]);
+
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [nextSongIndex, setNextIndex] = useState(currentSongIndex + 1);
+
+
   return (
     <div className="App">
-      COMPONENETS HERE!
+      <Player
+        song={songs[currentSongIndex]}
+        nextSong={songs[nextSongIndex]}
+        />
     </div>
   );
 }
