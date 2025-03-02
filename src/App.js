@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
 
 function App() {
+  const [songs, setSongs] = useState([
+    {
+    title: "Joy is coming",
+    artist: "Fido",
+    img_src: ".\images\fido.jpg"
+    src: "\music\Fido-Joy-Is-Coming-(TrendyBeatz.com).mp3"
+
+  ])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      COMPONENETS HERE!
     </div>
   );
 }
