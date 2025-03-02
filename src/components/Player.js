@@ -1,13 +1,14 @@
 import React from 'react';
+import PlayerDetails from './PlayerDetails';
 
-function Player() {
+function Player(props) {
     return (
         <div className="c-player">
             <audio></audio>
             <h4>Playing now</h4>
-            {/* DETAILS*/}
+            <PlayerDetails song={props.song} />
             {/* CONTROLS*/}
-            <p><strong>Next up:</strong>Military by Asake</p>
+            <p><strong>Next up:</strong>{props.nextSong.title} by {props.nextSong.artist}</p>
         </div>
     )
 }
