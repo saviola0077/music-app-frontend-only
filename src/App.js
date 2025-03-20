@@ -30,7 +30,7 @@ function App() {
   ]);
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [nextSongIndex, setNextIndex] = useState(currentSongIndex + 1);
+  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
   useEffect(() => {
     setNextSongIndex(() => {
