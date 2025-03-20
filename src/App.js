@@ -45,8 +45,10 @@ function App() {
   return (
     <div className="App">
       <Player
-        song={songs[currentSongIndex]}
-        nextSong={songs[nextSongIndex]}
+        currentSongIndex={currentSongIndex}
+        setCurrentSongIndex={setCurrentSongIndex}
+        nextSongIndex={nextSongIndex}
+        songs={songs}
         />
     </div>
   );
