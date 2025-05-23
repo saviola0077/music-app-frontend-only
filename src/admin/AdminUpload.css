@@ -1,0 +1,42 @@
+.music-upload-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  .music-upload-form h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .music-upload-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .music-upload-form input[type=\"text\"],
+  .music-upload-form input[type=\"file\"] {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .music-upload-form button {
+    padding: 0.7rem 1.5rem;
+    background-color: #4b6cb7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .music-upload-form button:hover {
+    background-color: #3a54a3;
+  }
+  
