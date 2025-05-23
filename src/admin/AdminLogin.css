@@ -1,0 +1,100 @@
+/* Style for the form container */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for the form */
+.user-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for each form group (label + input) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Input styling */
+.form-group input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Placeholder styling */
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+/* Submit button styling */
+.submit-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+/* Create New User button styling */
+.create-user-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;  /* New color for "Create New User" */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Space between buttons */
+    align-items: center;
+    text-align: center;
+}
+
+.create-user-button:hover {
+    background-color: #0056b3;  /* Darker shade for hover effect */
+}
+
+/* Success message styling */
+.success-message {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
