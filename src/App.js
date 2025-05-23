@@ -1,55 +1,30 @@
-import {useState, useEffect} from 'react';
-import Player from './components/Player';
+import {useState, useEffect} from 'react'; // usestate is a react hook that lets you add a state variable to your component
+import Create from './components/createUser';
+import Login from './components/loginUser';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router';
+import Home from './components/Home';
+import AdminLogin from './admin/AdminLogin';
+import AdminView from './admin/AdminView';
+import AdminDashboard from '../src/admin/AdminDashboard';
+import AdminUpload from '../src/admin/AdminUpload';
+import AdminUpdate from './admin/AdminUpdate';
 
 function App() {
-  const [songs] = useState([
-    {
-      title: "Joy is coming",
-      artist: "Fido",
-      img_src: "./images/fido.jpg",
-      src: "./music/Joy is coming.mp3",
-    },
-    {
-      title: "Military",
-      artist: "Asake",
-      img_src: "./images/asake.jpg",
-      src: "./music/Asake_-_Military.mp3"
-    },
-    {
-      title: "Jay Jay",
-      artist: "Ruger",
-      img_src: "./images/Ruger_(Singer).jpg",
-      src: "./music/ruger jay jay.mp3"
-    },
-    {
-      title: "Safe Haven",
-      artist: "Omahlay",
-      img_src: "./images/omahlay.jpg",
-      src: "./music/safe haven.mp3"
-    }
-  ]);
-
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
-
-  useEffect(() => {
-    setNextSongIndex(() => {
-      if (currentSongIndex + 1 > songs.length - 1) {
-        return 0;
-      } else {
-        return currentSongIndex + 1;
-      }
-    });
-  }, [currentSongIndex]);
-
+  
   return (
     <div className="App">
-      <Player
-        currentSongIndex={currentSongIndex}
-        setCurrentSongIndex={setCurrentSongIndex}
-        nextSongIndex={nextSongIndex}
-        songs={songs}
-        />
+      <Router>
+        <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/register" element={<Create />} />
+        <Route path="/admin/admin-login" element={<AdminLogin />} />
+        <Route path="/admin/admin-music" element={<AdminView />} />
+        <Route path="/admin/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/admin-upload" element={<AdminUpload />} />
+        <Route path="/admin/admin-update/:id" element={<AdminUpdate />} />
+      </Routes>
+    </Router>
     </div>
   );
 }
